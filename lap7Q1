@@ -1,0 +1,26 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+  
+
+void printRandomNumbers(int lower_num, int upper_num, int count)
+{
+    int i;
+    for (i = 0; i < count; i++) {
+        int number = (rand() %
+           (upper_num - lower_num + 1)) + lower_num;
+        printf("%d ", number);
+    }
+}
+  
+
+int main()
+{
+    int lower_num = 2, upper_num = 9, count = 5;
+ 
+    srand(time(0));
+  
+    printRandoms(lower_num, upper_num, count);
+  
+    return 0;
+}
